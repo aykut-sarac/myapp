@@ -1,38 +1,352 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #1b262c;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: rgb(10, 10, 10);
+  --mainGrey: #706c61;
+  --darkGrey: #333333;
+  --mainBlue: #0f4c75;
+  --lightBlue: #3282b8;
+  --mainYellow: #f0a500;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 2px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+/* globals */
+body {
+  padding-top: 100vh - 0.75rem;
+  color: var(--offWhite);
+  background: var(--primaryColor);
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+  line-height: 1.4;
+}
+h1 {
+  font-size: 4em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5,
+h6,
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--offWhite);
+  background: var(--primaryColor);
+  padding: 10px 20px;
+  border: 2px solid var(--mainGrey);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-right: 1rem;
+  outline: none;
+  width: 100px;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--mainYellow);
+}
+
+/* end of globals */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 0;
+  z-index: 10;
+  background: var(--mainBlack);
+}
+.navbar-items {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 1.5rem;
+  padding-top: 10px;
+}
+.navbar-btn:hover {
+  color: var(--mainYellow);
+}
+.nav-icon {
+  font-size: 2rem;
+  background: var(--offWhite);
+  border-radius: 20%;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  list-style: none;
+  transition: var(--mainTransition);
+}
+.nav-links a {
+  color: var(--offWhite);
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+.nav-links a:hover {
+  color: var(--mainYellow);
+}
+
+.nav-links li {
+  padding: 0.1rem 0;
+}
+
+.show-nav {
+  height: 120px;
+}
+@media screen and (min-width: 768px) {
+  .navbar-items {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-btn {
+    display: none;
+  }
+  .nav-items {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  .nav-links {
+    height: auto;
+    display: inline-flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0.7rem;
+    padding: 0.5rem 0;
+  }
+}
+/* end of navbar */
+
+/* Header */
+
+header {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  width: 100%;
+  background: url(../src/images/banner.jpg) no-repeat top center;
+  background-size: cover;
+}
+header:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+header .banner {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 40px;
   text-align: center;
 }
+header .banner-text {
+  color: var(--offWhite);
+  letter-spacing: var(--mainSpacing);
+}
+.banner-links {
+  background: transparent;
+  font-size: 30px;
+  color: var(--offWhite);
+  display: inline-flex;
+  justify-content: space-between;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  list-style: none;
+}
+.banner-link {
+  padding: 0 1rem;
+  background: transparent;
+  color: var(--offWhite);
+  transition: var(--mainTransition);
+}
+.banner-link:hover {
+  color: var(--mainYellow);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* end of header */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* About */
+.about {
+  position: relative;
+  min-height: 600px;
+  width: 100%;
+  background: url(../src/images/about.jpg) no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
+
+  opacity: 0.9;
+}
+.about-box {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 60%;
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+}
+.about-text {
+  color: var(--mainWhite);
+  letter-spacing: var(--mainSpacing);
+  text-align: justify;
+}
+/* end of about */
+
+/* projects */
+.project-main {
+  background: black;
+  padding: 4rem;
+}
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.project-img {
+  width: 220px;
+  height: 200px;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .project-img {
+    float: initial;
+  }
+}
+
+.project-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--primaryColor);
+  display: inline-block;
+  width: 700px;
+  padding: 1rem 1.2rem;
+  height: auto;
+  line-height: 40px;
+
+  margin: 2rem auto;
+  font-size: 0.8rem;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+}
+/* end of projects */
+
+/* form */
+.contact-me {
+  text-align: center;
+  padding-top: 5rem;
+}
+form {
+  max-width: 500px;
+  margin: 60px auto;
+}
+
+.feedback-input {
   color: white;
+
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 20px;
+  background-color: var(--primaryColor);
+  border: 2px solid #ce6565;
+  transition: var(--mainTransition);
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.feedback-input:focus {
+  border: 2px solid #c93030;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
 }
+
+[type="submit"] {
+  width: 100%;
+  background: #ce6565;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: 5px;
+  font-weight: 600;
+}
+[type="submit"]:hover {
+  background: #c93030;
+}
+
+/* end of form */
+
+/* footer */
+.footer {
+  width: 100%;
+  background: black;
+
+  color: white;
+  text-align: center;
+  padding: 3rem;
+  letter-spacing: var(--mainSpacing);
+}
+/* end of footer */
