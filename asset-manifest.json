@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/myapp/static/css/main.72e83d7b.chunk.css",
-    "main.js": "/myapp/static/js/main.a3e3f0ac.chunk.js",
-    "main.js.map": "/myapp/static/js/main.a3e3f0ac.chunk.js.map",
+    "main.css": "/myapp/static/css/main.6aacfd87.chunk.css",
+    "main.js": "/myapp/static/js/main.cea61394.chunk.js",
+    "main.js.map": "/myapp/static/js/main.cea61394.chunk.js.map",
     "runtime-main.js": "/myapp/static/js/runtime-main.6d446693.js",
     "runtime-main.js.map": "/myapp/static/js/runtime-main.6d446693.js.map",
-    "static/js/2.9caf2576.chunk.js": "/myapp/static/js/2.9caf2576.chunk.js",
-    "static/js/2.9caf2576.chunk.js.map": "/myapp/static/js/2.9caf2576.chunk.js.map",
+    "static/js/2.38939b0e.chunk.js": "/myapp/static/js/2.38939b0e.chunk.js",
+    "static/js/2.38939b0e.chunk.js.map": "/myapp/static/js/2.38939b0e.chunk.js.map",
     "index.html": "/myapp/index.html",
-    "precache-manifest.56af5625f53ceb7fccff3f0dd2febfce.js": "/myapp/precache-manifest.56af5625f53ceb7fccff3f0dd2febfce.js",
+    "precache-manifest.97b37d3fcd32058c27e4e487f58d40b6.js": "/myapp/precache-manifest.97b37d3fcd32058c27e4e487f58d40b6.js",
     "service-worker.js": "/myapp/service-worker.js",
-    "static/css/main.72e83d7b.chunk.css.map": "/myapp/static/css/main.72e83d7b.chunk.css.map",
-    "static/js/2.9caf2576.chunk.js.LICENSE.txt": "/myapp/static/js/2.9caf2576.chunk.js.LICENSE.txt",
+    "static/css/main.6aacfd87.chunk.css.map": "/myapp/static/css/main.6aacfd87.chunk.css.map",
+    "static/js/2.38939b0e.chunk.js.LICENSE.txt": "/myapp/static/js/2.38939b0e.chunk.js.LICENSE.txt",
+    "static/media/Resume.pdf": "/myapp/static/media/Resume.a8f2e616.pdf",
     "static/media/App.css": "/myapp/static/media/banner.d53fed8c.jpg",
-    "static/media/logo.svg": "/myapp/static/media/logo.5d5d9eef.svg"
+    "static/media/bloggif.gif": "/myapp/static/media/bloggif.7af0911c.gif",
+    "static/media/ecomgif.gif": "/myapp/static/media/ecomgif.49f6a476.gif",
+    "static/media/ozgif.gif": "/myapp/static/media/ozgif.9e42746d.gif",
+    "static/media/tweetmegif.gif": "/myapp/static/media/tweetmegif.4865394b.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.6d446693.js",
-    "static/js/2.9caf2576.chunk.js",
-    "static/css/main.72e83d7b.chunk.css",
-    "static/js/main.a3e3f0ac.chunk.js"
+    "static/js/2.38939b0e.chunk.js",
+    "static/css/main.6aacfd87.chunk.css",
+    "static/js/main.cea61394.chunk.js"
   ]
 }
