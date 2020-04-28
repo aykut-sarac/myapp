@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+
 import FooterAnimation from "./FooterAnimation";
 
 export default class Footer extends Component {
@@ -21,6 +21,7 @@ export default class Footer extends Component {
                         href={item.url}
                         target="_blank"
                         className="banner-link"
+                        rel="noopener noreferrer"
                       >
                         {item.className}
                       </a>

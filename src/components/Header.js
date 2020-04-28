@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+
 export default class Header extends Component {
   render() {
     let details = this.props.details;
@@ -21,6 +20,7 @@ export default class Header extends Component {
                         href={item.url}
                         target="_blank"
                         className="banner-link"
+                        rel="noopener noreferrer"
                       >
                         {item.className}
                       </a>

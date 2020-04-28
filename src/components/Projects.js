@@ -13,11 +13,12 @@ export default class Projects extends Component {
           <div className="project-wrapper">
             {details.projects.map((item) => {
               return (
-                <div className="project-card">
-                  <div key={item.name}>
+                <div key={item.name} className="project-card">
+                  <div>
                     <img
                       className="project-img"
-                      src="https://media.giphy.com/media/11xBk5MoWjrYoE/source.gif"
+                      src={item.imgurl}
+                      alt={item.imgurl}
                     ></img>
                   </div>
 
@@ -26,10 +27,18 @@ export default class Projects extends Component {
                     <p>{item.description}</p>
                   </div>
                   <div>
-                    <a href={item.code} target="_blank">
+                    <a
+                      href={item.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="btn-primary">Code</button>
                     </a>
-                    <a href={item.live} target="_blank">
+                    <a
+                      href={item.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="btn-primary">Live</button>
                     </a>
                   </div>

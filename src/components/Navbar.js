@@ -10,6 +10,7 @@ export default class Navbar extends Component {
   };
 
   render() {
+    let details = this.props.details;
     return (
       <nav className="navbar">
         <div className="navbar-toggler">
@@ -48,7 +49,7 @@ export default class Navbar extends Component {
               </a>
             </li>
             <li className="">
-              <a href="/logo192.png" className="" download>
+              <a href={details.resume} className="" download>
                 <FiDownload /> Resume
               </a>
             </li>
